@@ -1,5 +1,7 @@
 package cn.nanaki.hookcraft.client.modules;
 
+import cn.nanaki.hookcraft.client.modules.combat.KillAura;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +9,7 @@ public class Manager {
     private static final List<Modules> modules = new ArrayList<>();
 
     public static void init() {
+        modules.add(new KillAura());
     }
 
     public static List<Modules> getModules() {
