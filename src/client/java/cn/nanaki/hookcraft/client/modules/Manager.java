@@ -1,5 +1,6 @@
 package cn.nanaki.hookcraft.client.modules;
 
+import cn.nanaki.hookcraft.client.modules.combat.Critical;
 import cn.nanaki.hookcraft.client.modules.combat.KillAura;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ public class Manager {
     private static final List<Modules> modules = new ArrayList<>();
 
     public static void init() {
+        modules.add(new Critical());
         modules.add(new KillAura());
     }
 
