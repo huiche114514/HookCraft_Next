@@ -11,11 +11,7 @@ public class HookCraftClient implements ClientModInitializer {
     public void onInitializeClient() {
         Manager.init();
         Manager.onClientGeneral();
-        ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> {
-            CommandToggle.commands(dispatcher);
-        });
-        ClientTickEvents.END_CLIENT_TICK.register(_ -> {
-            Manager.onClientTick();
-        });
+        ClientCommandRegistrationCallback.EVENT.register((dispatcher, _) -> CommandToggle.commands(dispatcher));
+        ClientTickEvents.END_CLIENT_TICK.register(_ -> Manager.onClientTick());
     }
 }
