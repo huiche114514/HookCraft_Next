@@ -2,6 +2,7 @@ package cn.nanaki.hookcraft.client.modules;
 
 import cn.nanaki.hookcraft.client.modules.combat.Critical;
 import cn.nanaki.hookcraft.client.modules.combat.KillAura;
+import cn.nanaki.hookcraft.client.modules.movement.AutoSprint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +13,8 @@ public class Manager {
     public static void init() {
         modules.add(new Critical());
         modules.add(new KillAura());
+
+        modules.add(new AutoSprint());
     }
 
     public static List<Modules> getModules() {

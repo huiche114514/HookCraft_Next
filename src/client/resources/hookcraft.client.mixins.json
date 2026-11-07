@@ -3,6 +3,7 @@
   "package": "cn.nanaki.hookcraft.client.mixin",
   "compatibilityLevel": "JAVA_25",
   "client": [
+    "movement.AutoSprintMixin"
   ],
   "injectors": {
     "defaultRequire": 1
